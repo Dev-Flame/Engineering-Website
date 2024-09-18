@@ -1,7 +1,5 @@
 # Engineering Hub Website
 
-This is a web-based platform designed for managing engineering-related work orders, project requests, and content sharing. It provides an easy-to-use interface for teachers to assign tasks to students and post engineering projects. Students can view their assigned work orders and stay up-to-date with new engineering projects.
-
 [**Demo Link**](https://dev-flame.github.io/Engineering-Website/)
 
 ## Future Checklist
