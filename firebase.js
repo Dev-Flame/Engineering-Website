@@ -31,11 +31,7 @@ button.addEventListener("click", () => {
     const token = credential.accessToken;
     const user = result.user;
     // redirect user to homepage
-<<<<<<< HEAD
     window.location.href = "index.html";
-=======
-    window.location.href = "/index.html";
->>>>>>> cef12ff1e9447f161ce96e00988dd9cbbdeec2b4
     console.log(user);
 
   }).catch((error) => {
