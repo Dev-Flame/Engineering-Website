@@ -32,6 +32,7 @@ button.addEventListener("click", () => {
     const user = result.user;
     // redirect user to homepage
     window.location.href = "../index.html";
+    console.log(user);
 
   }).catch((error) => {
     const errorCode = error.code;
@@ -42,17 +43,47 @@ button.addEventListener("click", () => {
   
 })
 
+const user = auth.currentUser;
 
 
 // Check whether the user is signed in or not and then display the user's name
 
 const dropdownButton = document.getElementById('dropdownButton');
- function loginCheck() {
-  if (auth.currentUser) {
-    // User is signed in.
-    const uid = auth.currentUser.uid;
-    console.log(uid);
-    dropdownButton.childNodes[0].nodeValue = auth.currentUser.displayName;
+function updalteUserProfile(user) { 
+  const userName = user.displayName;
+  const userEmail = user.email;
+  const userProfi1ePicture = user.photoURL;
+  console.log(userEmail)  
+
+
+  // Update the profile section with user data
+  document.getElementById("dropdownButton").textContent = userName;
+}
+
+onAuthStateChanged(auth, (user) =>{
+  if (user) {
+    updalteUserProfile(user);
+    const uid = user.uid;
+    return uid;
+  } 
+
+  else {
+    alert("Please Login")
+    window.location.href = "./login.html"
   }
- }
+})
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (user) {
+    updalteUserProfile(user);
+    const uid = user.uid;
+    return uid;
+  } 
+
+  else {
+    alert("Please Login")
+    window.location.href = "./login.html"
+  }
+})
 

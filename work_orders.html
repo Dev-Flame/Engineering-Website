@@ -13,7 +13,7 @@
 <body class="bg-gray-100 flex flex-col min-h-screen">
     
   <header class="bg-blue-600 p-4 text-white text-center">
-    <h1 class="text-3xl">Work Orders</h1>
+    <h1 class="text-3xl">Engineering Hub</h1>
     <nav class="mt-2">
       <a href="index.html" class="text-white px-4">Home</a>
       <a href="work_orders.html" class="text-white px-4">Work Orders</a>
@@ -22,14 +22,14 @@
       
       <!-- Dropdown menu -->
       <div class="dropdown inline-block relative">
-        <button class="text-white px-4 py-2 inline-flex items-center">
+        <button id="dropdownButton" class="text-white px-4 py-2 inline-flex items-center">
           User
           <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M5.292 7.293a1 1 0 011.415 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </button>
-        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
-          <li><a class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 block whitespace-no-wrap" href="logout.html">Logout</a></li>
+        <ul class="dropdown-menu bg-black absolute hidden text-gray-700 pt-1">
+          <li><button style="width: 100%; height: 100%;" id="logout" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 block whitespace-no-wrap">Logout</button></li>
         </ul>
       </div>
     </nav>
