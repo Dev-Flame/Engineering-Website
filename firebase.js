@@ -1,3 +1,6 @@
+
+// Nerdy Google Firebase Stuff
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getAuth ,GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 
@@ -29,7 +32,7 @@ button.addEventListener("click", () => {
     const user = result.user;
     // redirect user to homepage
     window.location.href = "../index.html";
-    
+
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -38,4 +41,18 @@ button.addEventListener("click", () => {
   });
   
 })
+
+
+
+// Check whether the user is signed in or not and then display the user's name
+
+const dropdownButton = document.getElementById('dropdownButton');
+ function loginCheck() {
+  if (auth.currentUser) {
+    // User is signed in.
+    const uid = auth.currentUser.uid;
+    console.log(uid);
+    dropdownButton.childNodes[0].nodeValue = auth.currentUser.displayName;
+  }
+ }
 
